@@ -1,0 +1,112 @@
+.section {
+    background-color: var(--text-white);
+    padding: 80px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--section-gap);
+    min-height: 600px;
+}
+
+.imageCard {
+    background-color: var(--bg-yellow);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    /* Permite margin-left pe container */
+    align-items: center;
+    padding: 0;
+    /* Resetăm padding-ul cardului pentru a controla mărimea din container */
+    position: relative;
+}
+
+.textCard {
+    background-color: #867ece;
+    border-radius: var(--card-radius);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.contentWrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.placeholderImage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8A7A30;
+    font-size: 1.5rem;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+}
+
+.videoContainer {
+    width: 120%;
+    flex-shrink: 0;
+    /* Împiedică micșorarea când margin-left e mare */
+    /* Putem ajusta mărimea de aici */
+    margin-left: 20px;
+    /* Putem muta containerul de aici */
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+    /* Eliminăm spațiul alb de sub video */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .textCard,
+    .imageCard {
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+
+    .textCard {
+        padding: 2rem 8px;
+    }
+}

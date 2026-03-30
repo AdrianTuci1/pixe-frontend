@@ -1,0 +1,70 @@
+.section {
+    background-color: #f4efef;
+    color: #333;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.integrationIcon {
+    font-size: 2.5rem;
+    color: var(--bg-dark);
+}
+
+.integrationText {
+    font-size: 1.5rem;
+    color: var(--bg-dark);
+    font-weight: 100;
+    text-align: center;
+    font-weight: 500;
+}
+
+.integrationLink {
+    color: #4B70F5;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    position: relative;
+}
+
+.integrationLink::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #4B70F5;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.integrationLink:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10 8px;
+    }
+
+    .integrationText {
+        text-align: left;
+    }
+
+    .integrationIcon {
+        font-size: 4rem;
+    }
+
+}
